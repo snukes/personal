@@ -1,0 +1,85 @@
+/* mixin */
+/* Container formatting */
+body {
+  background-color: rbga(0, 0, 0, 0.2); }
+
+.container {
+  padding-top: 30px; }
+
+header {
+  width: 100%;
+  max-height: 250px;
+  max-width: 100%;
+  clear: both;
+  margin: 0 auto;
+  padding: 50px 0;
+  text-align: center;
+  background: url(../images/background.jpg) no-repeat center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+  border-radius: 3px; }
+  header h1, header h3 {
+    color: #fff; }
+
+#navbar nav {
+  background-color: #fff; }
+
+#content .doc-section {
+  background-color: #fff; }
+
+/* #Base 960 Grid
+================================================== */
+@media only screen and (min-width: 960px) {
+  #navbar {
+    padding: 30px 0;
+    margin: 0; }
+    #navbar nav {
+      background-color: #fff;
+      padding: 10px 0 0 0;
+      -webkit-border-radius: 3px;
+      -moz-border-radius: 3px;
+      -ms-border-radius: 3px;
+      -o-border-radius: 3px;
+      border-radius: 3px;
+      border: 1px solid #d8d8d8;
+      border-bottom-width: 2px; }
+      #navbar nav ul {
+        margin: 0; }
+      #navbar nav li {
+        padding: 0 20px 15px 20px;
+        margin: 0; }
+
+  #content {
+    padding: 30px 0;
+    margin: 0 0 0 20px;
+    width: 780px; }
+    #content .doc-section {
+      background-color: #fff;
+      margin-bottom: 20px;
+      padding: 10px 20px;
+      -webkit-border-radius: 3px;
+      -moz-border-radius: 3px;
+      -ms-border-radius: 3px;
+      -o-border-radius: 3px;
+      border-radius: 3px;
+      border: 1px solid #d8d8d8;
+      border-bottom-width: 2px; } }
+/* #Tablet (Portrait)
+================================================== */
+@media only screen and (min-width: 768px) and (max-width: 959px) {
+  #content {
+    padding: 30px 0; } }
+/*  #Mobile (Portrait)
+================================================== */
+@media only screen and (max-width: 767px) {
+  #navbar {
+    display: none; }
+
+  #content {
+    padding: 30px 0; } }
