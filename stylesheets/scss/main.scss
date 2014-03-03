@@ -14,6 +14,10 @@
 	background-size: cover;
 }
 
+@mixin text-shadow() {
+	text-shadow: 0px 1px 1px rgba(0,0,0,0.05),0 2px 8px rgba(0,0,0,0.05),0 2px 4px rgba(0,0,0,0.15);
+}
+
 /* Container formatting */
 body {
 	background-color: rbga(0,0,0,.2);
@@ -33,9 +37,11 @@ header {
 	padding: 50px 0;
 
 	text-align: center;
+	
 
 	h1, h3 {
 		color: #fff;
+		@include text-shadow();
 	}
 
 	background: url(../images/background.jpg) no-repeat center center; 
@@ -48,13 +54,35 @@ header {
 #navbar {
 	nav {
 		background-color: #fff;
+
+		@include border-radius(3px);
+ 		border: 1px solid #d8d8d8;
+ 		border-bottom-width: 2px;
 	}
 }
 
 #content {
 	.doc-section {
 		background-color: #fff;
+
+		@include border-radius(3px);
+ 		border: 1px solid #d8d8d8;
+ 		border-bottom-width: 2px;
 	}
+}
+
+#social-media-icons {
+	text-align: center;
+	padding-bottom: 15px;
+
+	span {
+		display: inline-block;
+
+		a {
+			padding: 0 10px;
+		}
+	}
+	
 }
 
 /* #Base 960 Grid
@@ -68,9 +96,7 @@ header {
 			background-color: #fff;
 			padding: 10px 0 0 0;
 
-			@include border-radius(3px);
- 			border: 1px solid #d8d8d8;
- 			border-bottom-width: 2px;
+			
  			
 
 			ul {
@@ -93,10 +119,6 @@ header {
 			background-color: #fff;
 			margin-bottom: 20px;
 			padding: 10px 20px;
- 			
- 			@include border-radius(3px);
- 			border: 1px solid #d8d8d8;
- 			border-bottom-width: 2px;
 		}
 	}
 }
@@ -107,8 +129,51 @@ header {
 /* #Tablet (Portrait)
 ================================================== */
 @media only screen and (min-width: 768px) and (max-width: 959px) {
+	#navbar {
+		padding:30px 0;
+		margin: 0;
+
+		nav {
+			background-color: #fff;
+			padding: 10px 0 0 0;
+
+			ul {
+				margin: 0;
+			}
+			
+			li {
+				padding: 0 20px 15px 20px;
+				margin: 0;
+			}
+		}
+	}
+
 	#content {
 		padding:30px 0;
+		margin: 0 0 0 20px;
+		width: 624px;
+
+		.doc-section {
+			background-color: #fff;
+			margin-bottom: 20px;
+			padding: 10px 20px;
+		}
+	}
+}
+
+/* #Mobile (Landscape)
+================================================== */
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+	#navbar {display: none; }
+	#content {
+		padding:30px 0;
+		margin: 0;
+
+		.doc-section {
+			background-color: #fff;
+			margin-bottom: 20px;
+			padding: 10px 20px;
+		}
 	}
 }
 
@@ -119,5 +184,12 @@ header {
 	#navbar {display: none; }
 	#content {
 		padding:30px 0;
+		margin: 0;
+
+		.doc-section {
+			background-color: #fff;
+			margin-bottom: 20px;
+			padding: 10px 20px;
+		}
 	}
 }
